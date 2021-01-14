@@ -1,1 +1,143 @@
+body {
+    font-family: "Cabin", sans-serif;
+}
+@media screen and (max-width: 768px) {
+    .fa-bars,
+    .fa-shopping-cart,
+    .fa-map-marker {
+        font-size: 16px;
+    }
+    .fa-bars {
+        float: left;
+    }
+    .shopping-cart {
+        padding: 10px 20px;
+    }
 
+    .searchBar {
+        box-shadow: 0px 1px 10px #a4c2cc;
+        margin-right: 1rem;
+        display: flex;
+        border-radius: 2rem;
+    }
+
+    .search {
+        display: flex;
+    }
+
+    .fa-map-marker {
+        margin-left: 0.5rem;
+        margin-top: 1.5rem;
+    }
+    .place {
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .place-center {
+        text-align: center;
+        font-size: 11px;
+        font-weight: 600;
+    }
+    .topnav {
+        float: left;
+        margin-top: 2rem;
+    }
+    .marker {
+        float: right;
+    }
+    .topnav input[type="text"] {
+        padding: 6px;
+        font-size: 17px;
+        border: none;
+        width: 50%;
+        outline: none;
+    }
+
+    .topnav .search-container button {
+        padding: 6px 12px;
+        margin-left: 13px;
+        margin-top: 1px;
+        margin-right: 16px;
+        background: none;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .topnav .search-container button:hover {
+        background: #ccc;
+    }
+    .OnlineShopping {
+        background-color: #ffffff;
+        max-width: 100%;
+        border-radius: 2rem;
+    }
+    .shoppingCart {
+        color: rgba(255, 255, 255, 0.5);
+        width: 100%;
+        margin-left: -4px;
+    }
+    .shoptxt {
+        padding: 6px 25px;
+        font-weight: 700;
+        font-size: 20px;
+        color: #0062cc;
+    }
+    .icon {
+        position: fixed;
+    }
+    .reader {
+        margin: 0rem 5rem;
+    }
+    .scanimg {
+        margin-left: 3rem;
+        width: 35%;
+    }
+    .Scan-QR {
+        display: inline-block;
+        padding: 0.5rem 3rem;
+        margin-left: 1rem;
+        border-radius: 3rem;
+        color: #fff !important;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.15rem;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1c4e9a !important;
+            border-radius: 3rem;
+            z-index: -2;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: #00f1d14a;
+            transition: all 0.2s;
+            border-radius: 3rem;
+            z-index: -1;
+        }
+        &:hover {
+            color: #fff;
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+    .link {
+        color: white;
+    }
+}
