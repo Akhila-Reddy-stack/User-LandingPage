@@ -15,7 +15,7 @@ function App() {
           <Switch>
             <Route path='/user/home' component={UserHome} />
             <Route path='/scan' component={Scan} />
-            <Redirect to='/' component={UserHome}></Redirect>
+          <Redirect to='/'></Redirect>
           </Switch>
         </div>
 
