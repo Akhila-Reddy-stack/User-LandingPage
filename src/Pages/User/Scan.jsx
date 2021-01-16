@@ -44,39 +44,32 @@ class Scan extends PureComponent {
         this.setState({ open: false });
     };
 
-    
+
     render() {
         const { data, loading, open } = this.state;
-       
+
         return (
             <Fragment>
                 <>
-
                     <div>
-
                         <div className="webresponsive" >
-
-
                             <Row className="secrow">
                                 <QrReader className="wqr"
-                                    delay={300}  
+                                    delay={300}
                                     onError={this.handleError}
                                     onScan={this.handleScan}
                                     style={{ width: '100%' }}
                                 />
-                                 <p class="blinking"> Scanned Result :{this.state.result}</p>
-                                  
+                                <p class="blinking"> Scanned Result :{this.state.result}</p>
                             </Row>
-
                             <div class="txtcode">
                                 SCAN A  BARCODE OR SIGNAGE QR CODE
                             </div>
                             <Row class="">
                                 <span class="prblm">
                                     <Button type="submit" className="prblm-btn" onClick={this.onOpenModal}>
-                                        Problem in Scanning? <ArrowForwardIcon/>
+                                        Problem in Scanning? <ArrowForwardIcon />
                                     </Button>
-
                                 </span>
                                 <span class="changebtn">
                                     <Button type="submit" className="btn-primary changebtn-btn">
@@ -86,7 +79,6 @@ class Scan extends PureComponent {
                                 </span>
                             </Row>
                         </div>
-
                         <div className="mobileresponsive" >
                             <Loader fullPage loading={loading} />
                             <div class="qr-reader">
@@ -94,14 +86,12 @@ class Scan extends PureComponent {
                                     delay={300}
                                     onError={this.handleError}
                                     onScan={this.handleScan}
-                                    style={{ width: '60%' ,margin:"0 auto"}}
+                                    style={{ width: '60%', margin: "0 auto" }}
                                 />
                                 <p class="blinking"> Scanned Result :{this.state.result}</p>
-
                                 <div class="txtcode">
                                     SCAN A  BARCODE OR SIGNAGE QR CODE
                             </div>
-
                                 <div class="info" id=""> Search for the 7-Digit item ID on your product tag
                                 to continue with the purchase.
                           </div>
@@ -130,17 +120,16 @@ class Scan extends PureComponent {
                             </div>
                             <div>
                                 <Row className="codeimg">
-                                <Row md={6} className="btn-btn"> 
-                                    <Col md={6}>
-                                        <Button type="submit" className="Cancel-btn" onClick={this.onCloseModal}>
-                                            Cancel 
+                                    <Row md={6} className="btn-btn">
+                                        <Col md={6}>
+                                            <Button type="submit" className="Cancel-btn" onClick={this.onCloseModal}>
+                                                Cancel
                                         </Button>
-
-                                    </Col>
-                                    <Col md={6}>
-                                        <Button type="submit" className="btn-primary Proceed-btn"> Proceed </Button>
-                                    </Col>
-                                </Row>
+                                        </Col>
+                                        <Col md={6}>
+                                            <Button type="submit" className="btn-primary Proceed-btn"> Proceed </Button>
+                                        </Col>
+                                    </Row>
                                 </Row>
                             </div>
                         </div>

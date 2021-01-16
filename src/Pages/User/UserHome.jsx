@@ -51,18 +51,6 @@ class UserHome extends PureComponent {
     _slidePrev = () => {
         this.slider.current.slidePrev();
     };
-    frameLoadCarousel = () => {
-        const { bannerImgs } = this.state;
-        console.log(bannerImgs)
-
-        return _.map(bannerImgs, a =>
-        (
-            <div>
-                <img class="card-img-top image" className="bgimages" src={a} alt="Card image" />
-            </div>
-        )
-        )
-    }
 
     render() {
         const { data, loading } = this.state;
@@ -71,20 +59,17 @@ class UserHome extends PureComponent {
                 <>
                     <Loader fullPage loading={loading} />
                     <div className="shopping-cart">
-                    <div className="shopping-header">
-                        <div className="shopping-lefticon">
-                            <SideNav />
-                          
-
+                        <div className="shopping-header">
+                            <div className="shopping-lefticon">
+                                <SideNav />
                             </div>
                             <div className="shopping-righticon">
-                          <RoomIcon  className="marRight" />
-                        
-                            <PersonIcon className="marRight"/>
-                            <HeadsetMicIcon className="marRight"/>
-                             <ShoppingCartIcon  className="marRight"/><br/>
-                             <div><div class="place">Chennai</div></div>
-                        </div>
+                                <RoomIcon className="marRight" />
+                                <PersonIcon className="marRight" />
+                                <HeadsetMicIcon className="marRight" />
+                                <ShoppingCartIcon className="marRight" /><br />
+                                <div><div class="place">Chennai</div></div>
+                            </div>
                         </div>
                     </div>
                     <div class="">
