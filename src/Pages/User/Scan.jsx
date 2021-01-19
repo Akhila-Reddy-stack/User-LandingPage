@@ -99,7 +99,8 @@ class Scan extends PureComponent {
                                     <Button type="submit" className="Cancel-btn">
                                         <Link className="cancellink" to="/user/home" > Cancel </Link>
                                     </Button>
-                                    <Button type="submit" className="Proceed-btn"> Proceed </Button>
+                                    <Button type="submit" className="Proceed-btn"><Link to="/addtobag" className="link-proceed">
+                                         Proceed </Link></Button>
                                 </div>
                             </div>
                         </div>
@@ -127,7 +128,9 @@ class Scan extends PureComponent {
                                         </Button>
                                         </Col>
                                         <Col md={6}>
-                                            <Button type="submit" className="btn-primary Proceed-btn"> Proceed </Button>
+                                            <Button type="submit" className="btn-primary Proceed-btn">
+                                            <Link className="" to="/addtobag" className="link-proceed">
+                                         Proceed </Link></Button>
                                         </Col>
                                     </Row>
                                 </Row>
