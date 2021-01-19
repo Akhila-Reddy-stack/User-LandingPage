@@ -1,0 +1,230 @@
+
+.shopping-header{
+    border-bottom: 1px solid #c7c7c7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.mrselect{
+    margin-left:1rem;
+}
+.confirm{
+    // border: 2px solid lightgrey;
+    border-bottom: 1px solid #c7c7c7;
+    background-color: #e9ecefb3;
+    padding: 11px 9px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.cartt{
+    margin-left: 1rem;
+    margin-top: 4rem;
+    font-size: 27px;
+    font-weight: 700;
+  
+}
+.summary{
+    margin-top: 2rem;
+    border: 3px solid lightgrey;
+}
+.cart-details{
+    padding: 1rem 3rem;
+}
+.item-details{
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #e9ecefb3;
+    // font-weight: 700; 
+}
+.minusbtn,.plusbtn{
+    font-size: 22px;
+    font-weight: 700;
+    border: 2px solid lightgrey;
+    margin: 0 0.8rem;
+    padding: 3px 11px;
+    color: white;
+    background-color: lightslategrey;
+    cursor: pointer;
+}
+.bg{
+    padding: 2px 16px;
+    background-color: white;
+}
+.status{
+    margin-top: 2rem;
+    margin-left: 3rem;
+}
+.price{
+    font-weight: 700; 
+}
+.mar{
+    margin-right:1rem;
+}
+.off{
+    color:red;
+}
+.summary{
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: -1.4rem;
+}
+.vocher{
+    padding: 0.5rem 2rem;
+    margin-bottom: 1rem;
+    background-color: lightgrey;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 2rem;
+}
+.fileicon{
+    padding-left: 2rem;
+    padding-top: 0rem;
+}
+.drive{
+ 
+    width: 13vh !important;
+    height: 28vh !important;
+
+}
+.youcart{
+    margin-left: 2rem;
+}
+.item{
+    padding-left: 6rem;
+    padding-top: 2rem;
+}
+.rating{
+    padding: 0 3rem;
+}
+.ratingstar{
+    text-align: center;
+    border-radius: 5px;
+    background-color: #6c757d99;
+}
+.pdt{
+    padding-left: 1rem;
+}
+.rating-div{
+    margin: 2rem 0rem;
+}
+.inc-dec-num{
+    font-size: 21px;
+}
+.order{
+padding:5px 30px;
+}
+.order-sum{
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.pricelist{
+    padding-left: 7rem;
+}
+.mb{
+    margin-bottom: 1rem;
+}
+.orderbt{
+    border-bottom: 2px solid lightgrey;
+}
+.save{
+    font-size: 19px;
+    font-weight: 700;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    padding: 0.8rem 2rem;
+    background-color: #6c757da1;
+}
+.checkout{
+    cursor: pointer;
+    color:white;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-right: 3rem;
+    margin-top: -3rem;
+    margin-left: 11rem;
+    background-color: green;
+}
+.pp{
+    font-size: 21px;
+    font-weight: 700;
+}
+.view{
+    color:blue;
+    cursor: pointer;
+}
+.saved-details{
+    margin-top: 2rem;
+    margin-left:1rem;
+}
+.checkicon{
+    color: white;
+    margin-left: 7rem;
+    position: absolute;
+    left: 18rem;
+    top: -2.5rem;
+    bottom: 3rem;
+}
+.deleteicon{
+    cursor: pointer;
+}
+.nexticon{
+    margin-top: -0.3rem;
+    margin-right: 4rem;
+    margin-bottom: 10px;
+}
+/*************************MODAL STYLES**********/
+
+.deletemodal{
+    padding:1rem;
+    font-size:20px;
+    font-weight: 600;
+    margin:1rem 2rem;
+}
+.remove{
+    color:red;
+    text-align:center;
+    margin:1rem 0rem;
+}
+.remove-btn{
+    background-color:lightpink;
+    border:2px solid lightpink;
+    color:black;
+}
+.remove-btn :hover{
+    background-color:red;
+    border:2px solid red;
+    color:black;
+}
+.del-cancel-btn{
+    background-color:rgb(155, 143, 145);
+    border:2px solid rgb(155, 143, 145);
+}
+.del-cancel-btn:hover{
+    background-color:rgb(241, 234, 235);
+    border:2px solid rgb(241, 234, 235);
+}
+.mod-item-name{
+    text-align:center;
+}
+.removebtns{
+    margin:2rem 0rem;
+}
+.react-responsive-modal-modal {
+    border-radius: 1rem !important;
+}
+
+@media screen and (max-width: 1440px) {
+.cart-details {
+    padding: 1.5rem 3rem;
+}
+.summary {
+    margin-top: 6rem;
+}
+}
