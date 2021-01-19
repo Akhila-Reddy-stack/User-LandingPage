@@ -59,7 +59,7 @@ class UserHome extends PureComponent {
                 <>
                     <Loader fullPage loading={loading} />
                     <div className="shopping-cart">
-                        <div className="shopping-header">
+                        <div className="shopping-head">
                             <div className="shopping-lefticon">
                                 <SideNav />
                             </div>
