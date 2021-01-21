@@ -51,7 +51,7 @@ class UserHome extends PureComponent {
     _slidePrev = () => {
         this.slider.current.slidePrev();
     };
-
+  
     render() {
         const { data, loading } = this.state;
         return (
