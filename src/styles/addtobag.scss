@@ -61,36 +61,37 @@
 }
 .added-to-bag {
     border-radius: 14px;
-    cursor:pointer;
+    cursor: pointer;
     font-size: 22px;
     font-weight: 700;
     border: 2px solid greenyellow;
     text-align: center;
     margin: 0rem 19rem;
-    padding:0.5rem 0rem;
+    padding: 0.5rem 0rem;
     background: greenyellow;
 }
-.review{
+.review {
     border-style: groove;
     border-radius: 9px;
     padding: 2px 9px;
 }
-.stars,.noofstars{
+.stars,
+.noofstars {
     margin-top: -10px;
 }
-.noofstars{
-    margin-right:5px;
+.noofstars {
+    margin-right: 5px;
 }
-.stars{
-    margin-left:10px;
+.stars {
+    margin-left: 10px;
 }
-.cartlink,.cartlink :hover{
-    text-decoration: none!important;
-    color:black !important;
+.cartlink,
+.cartlink :hover {
+    text-decoration: none !important;
+    color: black !important;
 }
 @media screen and (max-width: 1440px) {
-.addbag {
-    margin: 6rem 11rem;
-}
-
+    .addbag {
+        margin: 6rem 11rem;
+    }
 }
