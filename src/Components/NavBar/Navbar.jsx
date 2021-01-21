@@ -14,7 +14,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import HeadsetMicIcon from '@material-ui/icons/HeadsetMic';
 import RoomIcon from '@material-ui/icons/Room';
 import SideNav from '../NavBar/Sidebar'
-// import SignUp from '../Auth/SignUp'
+import SignUp from '../Auth/SignUp'
 
 class NavBar extends PureComponent {
     constructor(props) {
@@ -75,9 +75,7 @@ class NavBar extends PureComponent {
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="#">
-                                                        <PersonIcon className="marRight" 
-                                                        // onClick={this.userSignIn}
-                                                         /></a>
+                                                        <PersonIcon className="marRight" /></a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="#">
@@ -103,11 +101,7 @@ class NavBar extends PureComponent {
                 </div>
 
 
-            {/* {
-                open=== true &&
-                <SignUp />
-            }
-                  */}
+                 
               
 
 
