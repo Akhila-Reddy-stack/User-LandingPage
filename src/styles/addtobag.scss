@@ -1,5 +1,5 @@
 .addbag {
-    margin: 5rem 11rem;
+    margin-top:2rem!important;
 }
 .itemName {
     font-size: 21px;
@@ -93,5 +93,6 @@
 @media screen and (max-width: 1440px) {
     .addbag {
         margin: 6rem 11rem;
+        margin-top: 10rem !important;
     }
 }

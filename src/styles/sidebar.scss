@@ -99,21 +99,20 @@ body {
   cursor: pointer;
 }
 .navimg {
-  margin-left: 1px;
-  width: 23%;
+
+  width: 26%;
+  margin-left: -5rem;
 }
-.card-header {
+.card-head {
   display: flow-root !important;
-  margin: 1rem 0;
-  padding: 0;
   border: none !important;
-  background: none;
 }
 .card {
   border: none;
   font-size: 18px;
   font-weight: 700;
-  margin-left: 6rem !important;
+  background-color: #dddddd0a !important;
+  margin-left: 3rem !important;
 }
 .sign-out {
   color: black;
@@ -129,28 +128,30 @@ body {
 }
 .card-list {
   display: flow-root !important;
-  width: 50%;
-  border-radius: 12px;
-  padding: 13px 8px;
-  margin: 0.5rem 0rem;
-  background-color: #c7c7c74d;
+  width: 84%;
+  border-radius: 25px !important;
+  background-color: #c7c7c74d !important;
   border: 2px solid #c7c7c74d;
 }
 .userimg {
   width: 25%;
 }
 .nav-title {
-  font-size: 17px;
+  font-size: 16px;
   margin-left: 5px;
+}
+.navimguser{
+  margin-left: -3rem;
+  width: 36%;
+
 }
 .nav-item {
   display: initial;
 }
 .fa-arrow-circle-right {
-  top: 2rem;
-  margin-left: 5px;
-  position: absolute;
-  right: 10px;
+    top: 1.3rem;
+    position: absolute;
+    right: 22px;
 }
 .fa-sign-out {
   font-size: 1.3rem;
@@ -166,7 +167,13 @@ body {
   width: 8%;
 }
 .cancelicon{
-  color:#0062cc;
+  top: 1rem;
+  right: 3rem;
+  position: relative;
+  float: right;
+  font-size: 15px;
+  color: #0062cc;
+  cursor:pointer;
 }
 .cancelicon:hover{
   color:red;
@@ -204,6 +211,12 @@ body {
     font-size: 12px !important;
   }
 }
+@media only screen and (max-width: 1440px) {
+  .overlay{
+    height:51% !important;
+  }
+}
+
 
 @media only screen and (max-width: 320px) {
   .shoptxt {
@@ -224,4 +237,74 @@ body {
   .fa-shopping-cart {
     left: 20rem;
   }
+}
+
+
+
+
+
+
+.overlay {
+  height: 64% !important;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 2rem;
+  left: 0;
+  border-right-color: #124a97;
+  border-top-right-radius: 43px;
+  border-bottom-right-radius: 43px;
+  background-color: #f8f9fa !important;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  // top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 31px;
+  color: black;
+  /* display: block; */
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #124a79;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.r-icons{
+    display:flex;
+        float: right;
+}
+.s-nav{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding-left: 3rem;
+  // height: 40vh;
+  background: white;
+  margin-top: -1rem;
+  padding-top: 1rem;
+  position: fixed;
+  z-index: 1;
+  opacity: 2;
+}
+.list-nav,.list-nav:hover{
+  text-decoration: none;
+}
+.list-nav :active{
+  text-decoration: none;
 }

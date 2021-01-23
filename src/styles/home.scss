@@ -3,14 +3,16 @@ body {
 }
 
 .shopping-cart {
-    padding: 0px 20px;
+    // padding: 0px 20px;
     margin-bottom: 3rem;
 }
 
 .place {
-    margin-left: -10px;
+    margin-top: -2rem;
+    margin-left: 5px;
     font-size: 12px;
     font-weight: 700;
+
 }
 .userdetails {
     border: none !important;
@@ -34,6 +36,7 @@ body {
     color: #0062cc;
 }
 .marRight {
+    color: black;
     margin-right: 2rem;
     font-size: 1.5rem !important;
 }
@@ -48,7 +51,9 @@ body {
     float: right;
     left: 62.5rem;
 }
-
+.cartlink{
+    color:black;
+}
 .reader {
     display: flex;
     margin: 1.5rem 12rem;
@@ -124,7 +129,7 @@ body {
 .bannerimg2,
 .bannerimg3,
 .bannerimg4 {
-    margin-top: 1rem;
+  margin-top:-1rem;
     width: 240vh;
     height: 62vh;
 }
