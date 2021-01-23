@@ -15,6 +15,7 @@ import HeadsetMicIcon from '@material-ui/icons/HeadsetMic';
 import RoomIcon from '@material-ui/icons/Room';
 import SideNav from '../NavBar/Sidebar'
 import SignUp from '../Auth/SignUp'
+import { Link } from 'react-router-dom';
 
 class NavBar extends PureComponent {
     constructor(props) {
@@ -43,7 +44,6 @@ class NavBar extends PureComponent {
     }
 
 
-
     render() {
 
         const { loggedIn ,open} = this.state;
@@ -51,60 +51,9 @@ class NavBar extends PureComponent {
 
         return (
             <Fragment>
+                   
                 <ReactNotification ref={this.notificationDOMRef} />
-                <div class="navBar">
-                    <div class="">
-                        <Row>
-                            <div class="container-fluid p-0 sticky-top" id="navigation">
-                                <div class="navigation">
-                                    <div class="navbar navbar-expand-lg navbar-light bg-light">
-                                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                                            aria-label="Toggle navigation">
-                                            <span class="navbar-toggle-icon"></span>
-                                        </button>
-
-                                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                                            <ul class="navbar-nav mx-auto">
-                                                <li class="nav-item">
-                                                    <SideNav className="nav-tog" />
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" >
-                                                        <RoomIcon className="marRight" /></a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#">
-                                                        <PersonIcon className="marRight" /></a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#">
-                                                        <HeadsetMicIcon className="marRight" /></a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="hotel">
-                                                        <ShoppingCartIcon className="marRight" />
-                                                        <div><div class="place">Chennai</div></div>
-                                                        <br /></a>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </Row>
-
-                    </div>
-                </div>
-
-
-                 
-              
-
-
+                <SideNav className="nav-tog" />
 
             </Fragment>
 

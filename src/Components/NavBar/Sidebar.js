@@ -9,6 +9,10 @@ import MenuIcon from '@material-ui/icons/Menu';
 import headerIcon from '../../Images/user/morrisons.png'
 import CancelIcon from '@material-ui/icons/Cancel';
 import { Link } from 'react-router-dom';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import PersonIcon from '@material-ui/icons/Person';
+import HeadsetMicIcon from '@material-ui/icons/HeadsetMic';
+import RoomIcon from '@material-ui/icons/Room';
 class SideNav extends React.Component {
   state = {
     state: {
@@ -49,6 +53,13 @@ class SideNav extends React.Component {
     }
   }
 
+  openNav = () => {
+    document.getElementById("myNav").style.width = "31%";
+  }
+  closeNav = () => {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
   render() {
     const { showNav } = this.state
     let navCoverStyle = { width: showNav ? "100%" : "0" }
@@ -56,50 +67,83 @@ class SideNav extends React.Component {
 
     return (
       <React.Fragment >
-        <div>
-          <span onClick={this.openNavClick} class="open-nav">
+        <div class="s-nav">
+
+
+          <div id="myNav" class="overlay">
+            <CancelIcon className="cancelicon close-nav " onClick={this.closeNavClick} />
+            <div class="overlay-content">
+              <div>
+                <Row>
+                  <div class="card  card-head nav-item nav-icon" >
+                    <img src={user} class="navimguser" /> <span class="nav-title user-head">Hello, User
+               </span>
+                  </div>
+                  <br />     <br />
+                </Row>
+                <Row>
+                  <Link to="/scan" className="list-nav">
+                    <div class="card card-list nav-item" >
+                      <img src={scan} class="navimg" /> <span class="nav-title" >
+                        Scan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <i class="fa fa-arrow-circle-right"></i></span>
+                    </div></Link>
+                </Row>
+                <Row>
+                  <Link to="#" className="list-nav">
+                    <div class="card  card-list nav-item">
+                      <img src={account} class="navimg" /> <span class="nav-title">Account  <i class="fa fa-arrow-circle-right"></i></span>
+                    </div></Link>
+                </Row>
+                <Row>
+                  <Link to="#" className="list-nav">
+                    <div class="card  card-list nav-item">
+                      <img src={offer} class="navimg" /><span class="nav-title">Offer
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-arrow-circle-right"></i>
+                      </span>
+                    </div></Link>
+                </Row>
+                <div class="card sign-out" onClick={this.closeNavClick} >
+                  <span class="logout"> <i class="fa fa-sign-out" aria-hidden="true"> </i> <span class="nav-title">Logout </span></span>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <span onClick={this.openNav} class="open-nav">
             <MenuIcon className="menubar" />
             <img className="headerIcon" src={headerIcon} />
           </span>
-        </div>
-        <div
-          onClick={this.navCoverClick}
-          class="nav-cover"
-          style={navCoverStyle}
-        />
-        <div name="side-nav" class="side-nav" style={sideNavStyle}>
-          {/* <a href="#" onClick={this.closeNavClick} class="close-nav">
-            &times;
-          </a> */}
-          <CancelIcon className="cancelicon close-nav " onClick={this.closeNavClick} />
-          <div>
-            <Row>
-              <div class="card  card-header nav-item nav-icon" >
-                <img src={user} class="navimg" /> <span class="nav-title user-head">Hello, User
-               </span>
-              </div>
-            </Row>
-            <Row>
-              <div class="card card-list nav-item" >
-                <img src={scan} class="navimg" /> <span class="nav-title" ><Link to="/scan" className="linkscan"> Scan</Link>
-                  <i class="fa fa-arrow-circle-right"></i></span>
-              </div>
-            </Row>
-            <Row>
-              <div class="card  card-list nav-item">
-                <img src={account} class="navimg" /> <span class="nav-title">Account  <i class="fa fa-arrow-circle-right"></i></span>
-              </div>
-            </Row>
-            <Row>
-              <div class="card  card-list nav-item">
-                <img src={offer} class="navimg" /><span class="nav-title">Offer <i class="fa fa-arrow-circle-right"></i></span>
-              </div>
-            </Row>
-            <div class="card sign-out" onClick={this.closeNavClick} >
-              <span class="logout"> <i class="fa fa-sign-out" aria-hidden="true"> </i> <span class="nav-title">Logout </span></span>
-            </div>
+          <div class="r-icons">
+            <ul class="r-icons mx-auto">
+              <li class="nav-item">
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" >
+                  <RoomIcon className="marRight" /></a><br />
+                <div class="place">Chennai</div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <PersonIcon className="marRight" /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <HeadsetMicIcon className="marRight" /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hotel">
+                  <Link to="/cart" className="cartlink">   <ShoppingCartIcon className="marRight" /> </Link>
+                  <div></div>
+                  <br /></a>
+              </li>
+
+            </ul>
           </div>
         </div>
+
         <div id="overlay" onClick={this.closeNavClick}></div>
       </React.Fragment>
     )
