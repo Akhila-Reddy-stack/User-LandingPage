@@ -54,7 +54,7 @@ class SideNav extends React.Component {
   }
 
   openNav = () => {
-    document.getElementById("myNav").style.width = "31%";
+    document.getElementById("myNav").style.width = "28%";
   }
   closeNav = () => {
     document.getElementById("myNav").style.width = "0%";
