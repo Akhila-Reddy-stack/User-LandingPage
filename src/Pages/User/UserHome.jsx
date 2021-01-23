@@ -21,7 +21,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PersonIcon from '@material-ui/icons/Person';
 import HeadsetMicIcon from '@material-ui/icons/HeadsetMic';
 import RoomIcon from '@material-ui/icons/Room';
-
+import NavBar from '../../Components/NavBar/Navbar'
 class UserHome extends PureComponent {
     constructor(props) {
         super(props)
@@ -59,17 +59,24 @@ class UserHome extends PureComponent {
                 <>
                     <Loader fullPage loading={loading} />
                     <div className="shopping-cart">
+                         {/* <div className="shopping-header">
+                         <div className="shopping-head">
+                            <div className="shopping-lefticon">
+                                <SideNav />
+                            </div></div>
+                            <NavBar />
+                        </div> */}
                         <div className="shopping-head">
                             <div className="shopping-lefticon">
                                 <SideNav />
                             </div>
-                            <div className="shopping-righticon">
+                            {/* <div className="shopping-righticon">
                                 <RoomIcon className="marRight" />
                                 <PersonIcon className="marRight" />
                                 <HeadsetMicIcon className="marRight" />
-                                <ShoppingCartIcon className="marRight" /><br />
+                               <Link to="/cart" className="cartlink"> <ShoppingCartIcon className="marRight"  />  </Link><br />
                                 <div><div class="place">Chennai</div></div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div class="">

@@ -25,9 +25,14 @@ class AddtoCart extends PureComponent {
             autoplay: true,
             checked: '',
             Selected: 'C',
-            item: "1",
+            item1: "1",
+            item2: "1",
+            item3: "1",
             open: false,
-            islogged: false
+            islogged: false,
+            size1:"No Size",
+            size2:"No Size",
+            size3:"No Size",
         }
     }
 
@@ -46,21 +51,41 @@ class AddtoCart extends PureComponent {
         });
         console.log(this.state)
     }
-    plusbtn = async () => {
-        let incitems = parseInt(this.state.item) + 1
-        await this.setState({
-            item: incitems
-        })
-    }
-    minusbtn = async () => {
-
-        if (this.state.item > 1) {
-            let decitems = parseInt(this.state.item) - 1
-            await this.setState({
-                item: decitems
-            })
+    plusbtn = async (value) => {
+        console.log("plus",value,typeof(value))
+        if(value == "1"){
+            console.log("gggg")
+            let incitems1 = parseInt(this.state.item1) + 1
+            await this.setState({ item1: incitems1, size1:incitems1 })
+        }
+         else if(value =="2"){
+                let incitems2 = parseInt(this.state.item2) + 1
+                await this.setState({ item2: incitems2, size2:incitems2 })
+            
+        }
+        else if(value == "3"){
+            let incitems3 = parseInt(this.state.item3) + 1
+            await this.setState({ item3: incitems3, size3:incitems3 })
         }
     }
+    minusbtn = async (value) => {
+        console.log("plus",value)
+        if( this.state.item1 >"1" && value == "1"){
+            let decitems1 = parseInt(this.state.item1) - 1
+            await this.setState({ item1: decitems1, size1:decitems1 })
+        }
+         else if(this.state.item2 > 1 && value == "2"){
+                let decitems2 = parseInt(this.state.item2) - 1
+                await this.setState({ item2: decitems2, size2:decitems2 })
+            
+        }
+        else if(this.state.item3 > 1 && value == "3"){
+            let decitems3 = parseInt(this.state.item3) - 1
+            await this.setState({ item3: decitems3, size3:decitems3 })
+        }
+    }
+    
+   
     onOpenModal = () => {
         this.setState({ open: true });
     };
@@ -73,23 +98,33 @@ class AddtoCart extends PureComponent {
     onCloseModal = () => {
         this.setState({ open: false });
     };
+
+  
+ 
+ 
     render() {
-        const { data, loading, islogged, Selected, item, open } = this.state;
+        const { data, loading, islogged, Selected, item1, open ,size1,item2,item3,size2,size3} = this.state;
         return (
             <Fragment>
                 <>
                     <Loader fullPage loading={loading} />
-                    <div className="">
+                    
+
+                    <div>
                         <div className="shopping-header">
                             <NavBar />
                         </div>
+                        <br/> 
+
                         <div>
                             <Row>
                                 <Col md={7} className="cart-details">
+
+                   
                                     <div class="cartt"><i class="fas fa-arrow-circle-left"></i>
                                         <span class="youcart"> YOUR CART</span>
                                     </div>
-                                    <div className='row mb-3 px-2'>
+                                  <div className='row mb-3 px-2'>
                                         <div className='col pt-3'>
                                             <RadioButton type="radio" onChange={(e) => this.onChangeRadio(e)}
                                                 field="Cart" name="Cart" value="C"
@@ -117,7 +152,7 @@ class AddtoCart extends PureComponent {
                                                 value="CO" label="Checkout"
                                                 checked={Selected === "CO" ? true : false} />
                                         </div>
-                                    </div>
+                                    </div> 
                                     <div className='row mb-3 px-2 confirm'>
                                         <i class="fas fa-info-circle"></i>
                                         <span class="pdt">
@@ -140,14 +175,14 @@ class AddtoCart extends PureComponent {
                                                                 4/5<i class="fas fa-star"></i>
                                                             </Col>
                                                             <Col md={6}>
-                                                                Size:No Size
+                                                            Size: {size1}
                                                      </Col>
                                                         </Row>
                                                         <div className=''>
                                                             Qty
-                                                    <Button className="minusbtn" onClick={this.minusbtn}>-</Button>
-                                                            <span className="btn inc-dec-num" >{item}</span>
-                                                            <Button className="plusbtn" onClick={this.plusbtn}> +</Button>
+                                                    <Button className="minusbtn" onClick={()=>this.minusbtn(1)}>-</Button>
+                                                            <span className="btn inc-dec-num" >{item1}</span>
+                                                            <Button className="plusbtn" onClick={()=>this.plusbtn(1)}> +</Button>
                                                         </div>
                                                     </div>
 
@@ -162,6 +197,88 @@ class AddtoCart extends PureComponent {
                                                 <span className="price mar" >$75.00</span>
                                                 <span className="mar" >$80.00</span>
                                                 <span className="mar off" >(15% OFF)</span>
+                                            </div>
+                                        </Row>
+                                    </div>
+                                    <div className='row mb-3 px-2 item-details'>
+                                        <div>
+                                            <Row>
+                                                <Col md={2} className="fileicon" >
+                                                    <InsertDriveFileIcon className="drive" />
+                                                </Col>
+                                                <Col md={10} className="item">
+                                                    <div className=''>
+                                                        Bottle 0.8L Tritan Screw Top Hiking Flask:Pink
+                                                </div>
+                                                    <div className='rating'>
+                                                        <Row className="rating-div">
+                                                            <Col md={6} className="ratingstar">
+                                                                3/5<i class="fas fa-star"></i>
+                                                            </Col>
+                                                            <Col md={6}>
+                                                                Size: {size2}
+                                                     </Col>
+                                                        </Row>
+                                                        <div className=''>
+                                                            Qty
+                                                    <Button className="minusbtn" onClick={()=>this.minusbtn(2)}>-</Button>
+                                                            <span className="btn inc-dec-num" >{item2}</span>
+                                                            <Button className="plusbtn" onClick={()=>this.plusbtn(2)}> +</Button>
+                                                        </div>
+                                                    </div>
+
+                                                </Col>
+                                            </Row>
+
+                                        </div>
+                                        <Row>
+                                            <div className='row mb-3 px-2 status '>
+                                                <span className="bg mar" ><DeleteIcon title="Delete" className="deleteicon" onClick={this.onOpenModal} /></span>
+                                                <span className="bg mar" >Edit</span>
+                                                <span className="price mar" >$100.00</span>
+                                                <span className="mar" >$120.00</span>
+                                                <span className="mar off" >(20% OFF)</span>
+                                            </div>
+                                        </Row>
+                                    </div>
+                                    <div className='row mb-3 px-2 item-details'>
+                                        <div>
+                                            <Row>
+                                                <Col md={2} className="fileicon" >
+                                                    <InsertDriveFileIcon className="drive" />
+                                                </Col>
+                                                <Col md={10} className="item">
+                                                    <div className=''>
+                                                        Bottle  2L Tritan Screw Top Hiking Flask:Green
+                                                </div>
+                                                    <div className='rating'>
+                                                        <Row className="rating-div">
+                                                            <Col md={6} className="ratingstar">
+                                                                4/5<i class="fas fa-star"></i>
+                                                            </Col>
+                                                            <Col md={6}>
+                                                            Size: {size3}
+                                                     </Col>
+                                                        </Row>
+                                                        <div className=''>
+                                                            Qty
+                                                    <Button className="minusbtn" onClick={()=>this.minusbtn(3)} >-</Button>
+                                                            <span className="btn inc-dec-num" >{item3}</span>
+                                                            <Button className="plusbtn" onClick={()=>this.plusbtn(3)}> +</Button>
+                                                        </div>
+                                                    </div>
+
+                                                </Col>
+                                            </Row>
+
+                                        </div>
+                                        <Row>
+                                            <div className='row mb-3 px-2 status '>
+                                                <span className="bg mar" ><DeleteIcon title="Delete" className="deleteicon" onClick={this.onOpenModal} /></span>
+                                                <span className="bg mar" >Edit</span>
+                                                <span className="price mar" >$175.00</span>
+                                                <span className="mar" >$180.00</span>
+                                                <span className="mar off" >(35% OFF)</span>
                                             </div>
                                         </Row>
                                     </div>
@@ -239,6 +356,7 @@ class AddtoCart extends PureComponent {
                         islogged === true &&
                         <SignUp />
                     }
+                      <div class="overlay"></div>
                 </>
 
             </Fragment >
@@ -249,5 +367,11 @@ class AddtoCart extends PureComponent {
 export default withSnackbar(AddtoCart)
 
 
-
+// function openNav() {
+//     document.getElementById("myNav").style.width = "100%";
+//   }
+  
+//   function closeNav() {
+//     document.getElementById("myNav").style.width = "0%";
+//   }
 
