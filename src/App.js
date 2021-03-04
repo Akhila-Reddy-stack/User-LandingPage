@@ -8,6 +8,14 @@ import Scan from './Pages/User/Scan';
 import Cart from './Pages/User/Cart';
 import AddtoCart from './Pages/User/AddCart';
 import AddtoBag from './Pages/User/AddtoBag';
+import Profile from './Pages/User/Profile'
+import EditProfile from './Pages/User/EditProfile'
+import Payment from './Pages/User/Payment'
+import Orders from './Pages/User/orders'
+import Summary from './Pages/User/Summary'
+import BookingSummary from './Pages/User/BookingSummary'
+import OrdersReturns from './Pages/User/Orders&Returns'
+import Confirm from './Pages/User/Confirm'
 function App() {
 
   return (
@@ -20,6 +28,14 @@ function App() {
             <Route path='/cart' component={Cart} />
             <Route path='/addcart' component={AddtoCart} />
             <Route path='/addtobag' component={AddtoBag} />
+            <Route path='/userProfile' component={Profile} />
+            <Route path='/editProfile' component={EditProfile} />
+            <Route path='/payment' component={Payment} />
+            <Route path='/orders' component={Orders} />
+            <Route path='/summary' component={Summary} />
+            <Route path='/bookingsummary' component={BookingSummary} />
+            <Route path='/returns' component={OrdersReturns} />
+            <Route path='/confirm' component={Confirm} />
             <Redirect to='/user/home' component={UserHome}></Redirect>
           </Switch>
         </div>
