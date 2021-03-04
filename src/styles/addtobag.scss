@@ -1,13 +1,17 @@
 .addbag {
-    margin-top:2rem!important;
+    margin-top: 2rem !important;
+}
+.mobileedit-nav {
+    display: none;
 }
 .itemName {
+    text-transform: capitalize;
     font-size: 21px;
     font-weight: 600;
     margin: 0 12rem;
 }
 .itemid {
-    font-size: 21px;
+    font-size: 30px;
     font-weight: 600;
     margin: 1rem 19rem;
     color: #6c757dad;
@@ -94,5 +98,72 @@
     .addbag {
         margin: 6rem 11rem;
         margin-top: 10rem !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mobileedit-nav {
+        display: block;
+    }
+    .addbag-head {
+        display: none;
+    }
+
+    .addbag {
+        margin: 0rem !important;
+    }
+    .itemName {
+        margin: 1rem 3rem;
+        text-align: center;
+    }
+
+    .itemid {
+        text-align: center;
+        margin: 0rem !important;
+    }
+
+    .item-price {
+        margin: 1rem 1rem;
+        display: flex !important;
+    }
+
+    .totalprice {
+        width: 93px;
+        padding-left: 1rem;
+    }
+    .strike {
+        margin-top: -3rem;
+        padding-left: 7rem;
+    }
+    .offer {
+        margin-top: -3rem;
+        margin-left: 12rem;
+    }
+    .feedback {
+        font-size: 14px;
+        margin: 0rem;
+    }
+    .review {
+        width: 50%;
+        margin-top: -1.6rem;
+        margin-left: 10rem;
+    }
+    .item-pdt {
+        font-size: 18px;
+
+        margin: 1rem 1rem;
+    }
+    .success {
+        width: 25%;
+        margin-right: 0rem;
+    }
+
+    .added-to-bag {
+        margin: 0rem 2rem;
+    }
+    .bagbadge{
+        color: black;
+        position: relative;
+        left: 15rem;
     }
 }

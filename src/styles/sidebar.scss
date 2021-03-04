@@ -21,10 +21,6 @@
   -webkit-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
-
-  // -webkit-transform: skewX(30deg);
-  // -ms-transform: skewX(30deg);
-  // transform: skewX(30deg);
 }
 
 html,
@@ -72,7 +68,7 @@ body {
   top: 16px;
   right: 4rem;
   font-size: 1.6rem;
-   cursor: pointer;
+  cursor: pointer;
 }
 .side-nav .close-nav:hover {
   color: rgb(224, 22, 22);
@@ -99,7 +95,6 @@ body {
   cursor: pointer;
 }
 .navimg {
-
   width: 26%;
   margin-left: -5rem;
 }
@@ -140,18 +135,17 @@ body {
   font-size: 16px;
   margin-left: 5px;
 }
-.navimguser{
+.navimguser {
   margin-left: -3rem;
   width: 36%;
-
 }
 .nav-item {
   display: initial;
 }
-.fa-arrow-circle-right {
-    top: 1.3rem;
-    position: absolute;
-    right: 22px;
+.sidenav-right {
+  top: 1.3rem;
+  position: absolute;
+  right: 22px;
 }
 .fa-sign-out {
   font-size: 1.3rem;
@@ -166,17 +160,17 @@ body {
   margin-left: 4rem;
   width: 8%;
 }
-.cancelicon{
+.cancelicon {
   top: 1rem;
   right: 3rem;
   position: relative;
   float: right;
   font-size: 15px;
   color: #0062cc;
-  cursor:pointer;
+  cursor: pointer;
 }
-.cancelicon:hover{
-  color:red;
+.cancelicon:hover {
+  color: red;
 }
 @media only screen and (max-width: 768px) {
   .side-nav {
@@ -186,23 +180,47 @@ body {
     font-size: 16px;
   }
   .card {
-    margin-left: 3rem !important;
+    margin-left: 2rem !important;
   }
   .card-list {
-    width: 53%;
+    width: 72%;
   }
-
+  .headerIcon {
+    margin-top: -4rem;
+    width: 112% !important;
+    margin-left: 1rem !important;
+  }
   .card-header {
     padding: 0 !important;
   }
   .fa-arrow-circle-right {
     top: 1rem;
-}
-.side-nav .close-nav {
-  top: 22px;
-  right: 5rem;
-  font-size: 1.1rem;
+  }
+  .side-nav .close-nav {
+    top: 22px;
+    right: 5rem;
+    font-size: 1.1rem;
+  }
 
+  .s-nav {
+    display: flex;
+  }
+  .menubar {
+    margin-top: 14px;
+    margin-left: -33px;
+    font-size: 28px !important;
+  }
+  .navimguser {
+    margin-left: -5rem;
+    width: 78%;
+  }
+  .mystyle{
+    width:57% !important;
+    height: 36% !important;
+  }
+  .navimg {
+    width: 31% !important;
+    margin-left: -3rem !important;
 }
 }
 
@@ -212,11 +230,10 @@ body {
   }
 }
 @media only screen and (max-width: 1440px) {
-  .overlay{
-    height:51% !important;
+  .overlay {
+    height: 51% !important;
   }
 }
-
 
 @media only screen and (max-width: 320px) {
   .shoptxt {
@@ -238,14 +255,11 @@ body {
     left: 20rem;
   }
 }
-
-
-
-
-
-
+.mystyle{
+  width:28%;
+}
 .overlay {
-  height: 64% !important;
+  height: 64%;
   width: 0;
   position: fixed;
   z-index: 1;
@@ -276,7 +290,8 @@ body {
   transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover,
+.overlay a:focus {
   color: #124a79;
 }
 
@@ -287,11 +302,11 @@ body {
   font-size: 60px;
 }
 
-.r-icons{
-    display:flex;
-        float: right;
+.r-icons {
+  display: flex;
+  float: right;
 }
-.s-nav{
+.s-nav {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding-left: 3rem;
   // height: 40vh;
@@ -302,9 +317,10 @@ body {
   z-index: 1;
   opacity: 2;
 }
-.list-nav,.list-nav:hover{
+.list-nav,
+.list-nav:hover {
   text-decoration: none;
 }
-.list-nav :active{
+.list-nav :active {
   text-decoration: none;
 }
